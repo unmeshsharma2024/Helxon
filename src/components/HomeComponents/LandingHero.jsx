@@ -12,7 +12,7 @@ export function LandingHero() {
       visible: {
         opacity: 1,
         zIndex: 10,
-        transition: { staggerChildren: 0.8 },
+        transition: { staggerChildren: 0.5 },
       },
     },
     word: {
@@ -21,7 +21,7 @@ export function LandingHero() {
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
-        transition: { duration: 0.2, ease: "easeOut" },
+        transition: { duration: 0.15, ease: "easeOut" },
       },
     },
     paragraph: {
@@ -29,7 +29,7 @@ export function LandingHero() {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.2, ease: "easeOut", delay: 0.6 },
+        transition: { duration: 0.15, ease: "easeOut", delay: 0.4 },
       },
     },
   };

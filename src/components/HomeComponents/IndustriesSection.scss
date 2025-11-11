@@ -1,18 +1,18 @@
 .industries-section {
   position: relative;
+  width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-  padding: 6rem 0;
-  overflow: hidden;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 6rem 5% 6rem 5%;
+  overflow-x: hidden;
+  overflow-y: visible;
 
   @media (max-width: 768px) {
-    padding: 4rem 0;
+    padding: 4rem 5%;
   }
 
   @media (max-width: 480px) {
-    padding: 3rem 0;
+    padding: 3rem 5%;
   }
 
   /* Animated Background Elements */
@@ -81,13 +81,14 @@
   }
 
   &__title {
-    background: linear-gradient(135deg, rgb(43, 127, 237) 0%, rgb(93, 173, 226) 100%) text;
+    background: linear-gradient(135deg, rgb(43, 127, 237) 0%, rgb(93, 173, 226) 100%);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-family: "Poppins", "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 500;
     line-height: 1.1;
-    color: #1a2348;
     margin: 0 0 0.5rem 0;
 
     @media (min-width: 640px) {
@@ -112,6 +113,7 @@
     gap: 1.5rem;
     max-width: 90rem;
     margin: 0 auto;
+    width: 100%;
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
@@ -120,6 +122,7 @@
 
     @media (min-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
   }
 
@@ -166,6 +169,8 @@
 /* Industry Card */
 .industry-card {
   position: relative;
+  width: 100%;
+  min-height: 280px;
 
   &--centered {
     @media (min-width: 1024px) {
@@ -176,6 +181,7 @@
   &__inner {
     position: relative;
     height: 100%;
+    min-height: 280px;
     background: #ffffff;
     border-radius: 1rem;
     padding: 2rem;
@@ -183,22 +189,27 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
 
   &__overlay {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
+  }
 
-    .industry-card:hover & {
-      opacity: 1;
-    }
+  &__inner:hover &__overlay {
+    opacity: 0.95;
   }
 
   &__content {
     position: relative;
     z-index: 10;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   &__icon-wrapper {
@@ -216,10 +227,10 @@
     width: 2rem;
     height: 2rem;
     transition: color 0.3s ease;
+  }
 
-    .industry-card:hover & {
-      color: #ffffff !important;
-    }
+  &__inner:hover &__icon {
+    color: #ffffff !important;
   }
 
   &__title {
@@ -231,10 +242,10 @@
     margin-bottom: 0.75rem;
     color: #1a2348;
     transition: color 0.3s ease;
+  }
 
-    .industry-card:hover & {
-      color: #ffffff;
-    }
+  &__inner:hover &__title {
+    color: #ffffff;
   }
 
   &__description {
@@ -242,10 +253,11 @@
     line-height: 1.6;
     font-size: clamp(0.9rem, 1.5vw, 0.95rem);
     transition: color 0.3s ease;
+    flex: 1;
+  }
 
-    .industry-card:hover & {
-      color: rgba(255, 255, 255, 0.9);
-    }
+  &__inner:hover &__description {
+    color: rgba(255, 255, 255, 0.9);
   }
 
   &__cta {
@@ -257,10 +269,10 @@
     transition: opacity 0.3s ease;
     color: #ffffff;
     font-weight: 500;
+  }
 
-    .industry-card:hover & {
-      opacity: 1;
-    }
+  &__inner:hover &__cta {
+    opacity: 1;
   }
 
   &__arrow {
@@ -277,18 +289,21 @@
     height: 8rem;
     opacity: 0.1;
     transition: opacity 0.3s ease;
+  }
 
-    .industry-card:hover & {
-      opacity: 0.2;
-    }
+  &__inner:hover &__corner {
+    opacity: 0.2;
   }
 }
 
 /* Responsive adjustments for cards */
 @media (max-width: 768px) {
   .industry-card {
+    min-height: 250px;
+
     &__inner {
       padding: 1.5rem;
+      min-height: 250px;
     }
 
     &__icon-wrapper {
@@ -310,8 +325,11 @@
 
 @media (max-width: 480px) {
   .industry-card {
+    min-height: 230px;
+
     &__inner {
       padding: 1.25rem;
+      min-height: 230px;
     }
 
     &__icon-wrapper {

@@ -121,7 +121,7 @@ export function IndustriesSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           <motion.h2
             className="industries-section__title"
@@ -155,8 +155,8 @@ export function IndustriesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
+                  duration: 0.4,
+                  delay: index * 0.08,
                   ease: "easeOut",
                 }}
               >
@@ -166,7 +166,7 @@ export function IndustriesSection() {
                     y: -10,
                     boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
                   }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <motion.div
                     className="industry-card__overlay"
@@ -182,7 +182,7 @@ export function IndustriesSection() {
                         background: `${industry.color}20`,
                       }}
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <Icon
                         className="industry-card__icon"
@@ -216,7 +216,7 @@ export function IndustriesSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           <p className="industries-section__cta-text">
             Don&apos;t see your industry? We customize solutions for businesses

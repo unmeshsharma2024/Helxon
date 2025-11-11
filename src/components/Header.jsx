@@ -21,6 +21,7 @@ export function Header() {
   const pathname = usePathname();
 
   const [isInHeroSection, setIsInHeroSection] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const isSpecialPage = useMemo(
@@ -33,11 +34,14 @@ export function Header() {
   );
 
   useEffect(() => {
-    if (!isSpecialPage) {
-      return;
-    }
-
     const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 10);
+
+      if (!isSpecialPage) {
+        return;
+      }
+
       const heroSection = HERO_SELECTORS.map((selector) =>
         document.querySelector(selector),
       ).find(Boolean);
@@ -48,7 +52,7 @@ export function Header() {
       }
 
       const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = scrollY + 100;
       setIsInHeroSection(scrollPosition < heroBottom);
     };
 
@@ -74,34 +78,22 @@ export function Header() {
 
   return (
     <>
-      <header className={`header ${showWhiteHeader ? "header--white" : ""}`}>
+      <header className={`header ${showWhiteHeader ? 'header--white' : ''} ${isScrolled ? 'header--scrolled' : ''}`}>
         <div className="header__container">
           <div className="header__content">
-            <button
-              type="button"
-              className="header__logo"
-              onClick={handleLogoClick}
-              aria-label="Navigate to home"
-            >
+            {/* Logo */}
+            <div className="header__logo" onClick={handleLogoClick}>
               {showWhiteHeader ? (
-                <Image
-                  src={AboutUsLogo}
-                  alt="Helxon"
-                  className="header__logo-img"
-                  width={156}
-                  height={51}
-                  priority
-                />
+                <img src={AboutUsLogo} alt="Helxon" className="header__logo-img" />
               ) : (
                 <Logo />
               )}
-            </button>
+            </div>
 
+            {/* Get Started Button */}
             <Button
               variant="outline"
-              className={`header__button ${
-                showWhiteHeader ? "header__button--white" : ""
-              }`}
+              className={`header__button ${showWhiteHeader ? 'header__button--white' : ''}`}
               onClick={handleGetStarted}
             >
               Get Started
@@ -110,6 +102,7 @@ export function Header() {
         </div>
       </header>
 
+      {/* Get Started Modal */}
       <GetStartedModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );
