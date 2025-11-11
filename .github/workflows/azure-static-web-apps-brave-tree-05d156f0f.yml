@@ -15,22 +15,38 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
           lfs: false
-      - name: Build And Deploy
+
+      # 👇 Ensure Node 20 (Next.js 15/16 requires >=20.9)
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+
+      # 👇 Install dependencies with relaxed peer deps
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      # 👇 Build Next.js (for static export)
+      - name: Build Next.js app
+        run: npm run build
+
+      # 👇 Deploy built app to Azure Static Web Apps
+      - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BRAVE_TREE_05D156F0F }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (PR comments, etc.)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+
+          ###### Repository/Build Configurations ######
           app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          api_location: ""  # No API folder
+          output_location: ".next" # Next.js build output folder
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
