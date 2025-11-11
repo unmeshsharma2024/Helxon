@@ -1,14 +1,22 @@
+import { VorxocHero } from '@/components/PlatformComponents/VorxocHero';
+import { VorxocPartners } from '@/components/PlatformComponents/VorxocPartners';
+import { VorxocOverview } from '@/components/PlatformComponents/VorxocOverview';
+import { SecurityToolsIntegration } from '@/components/PlatformComponents/SecurityToolsIntegration';
+import { IntegrationBenefits } from '@/components/PlatformComponents/IntegrationBenefits';
+import { WhyChooseVorxoc } from '@/components/PlatformComponents/WhyChooseVorxoc';
+import { ReadyToSecure } from '@/components/PlatformComponents/ReadyToSecure';
+import './PlatformPage.scss';
+
 export default function PlatformPage() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-6">
-        <h1 className="text-4xl font-semibold text-slate-900">Platform</h1>
-        <p className="mt-4 max-w-2xl text-lg text-slate-600">
-          Platform page placeholder. We&apos;ll migrate details from the existing
-          React build next.
-        </p>
-      </div>
-    </section>
+    <div className="platform-page">
+      <VorxocHero />
+      <VorxocPartners />
+      <VorxocOverview />
+      <SecurityToolsIntegration />
+      <IntegrationBenefits />
+      <WhyChooseVorxoc />
+      <ReadyToSecure />
+    </div>
   );
 }
-

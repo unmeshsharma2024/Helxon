@@ -1,0 +1,67 @@
+.vorxoc-partners {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  background: #ffffff;
+
+  &__container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 3rem);
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2rem, 5vw, 3rem);
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(80px, 15vw, 100px);
+    transition: transform 0.3s ease;
+  }
+
+  &__logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all 0.3s ease;
+
+    .vorxoc-partners__logo-wrapper:hover & {
+      filter: grayscale(0%) opacity(1);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .vorxoc-partners {
+    &__logos {
+      gap: clamp(1.5rem, 4vw, 2rem);
+    }
+  }
+}
+
