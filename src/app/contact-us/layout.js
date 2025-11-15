@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: helxonImage,
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'Contact Helxon',
@@ -21,7 +21,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Contact Us - Get in Touch with Our Security Experts | Helxon',
     description: 'Contact Helxon for enterprise cybersecurity solutions. Speak with our security experts about SOC-as-a-Service and threat monitoring.',
-    images: [helxonImage],
+    images: [helxonImage.src],
   },
   alternates: {
     canonical: 'https://helxon.com/contact-us',

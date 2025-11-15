@@ -6,6 +6,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { BottomNavBar } from "@/components/BottomNavBar";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import helxonImage from '@/app/assets/HelxonLogo.png';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export const metadata = {
     default: 'Helxon | Enterprise Cybersecurity & SOC-as-a-Service Solutions',
     template: '%s | Helxon'
   },
-  description: 'Helxon delivers enterprise-grade SOC-as-a-Service, 24/7 threat monitoring, and Microsoft-powered cybersecurity solutions. Protect your organization with our unified security platform VorXOC.',
+  description: 'Helxon delivers 24/7 SOC-as-a-Service, MDR, threat monitoring, detection, and incident response. Protect your business with enterprise-grade cybersecurity at scale.',
   keywords: ['SOC-as-a-Service', 'cybersecurity', 'threat monitoring', 'Microsoft Sentinel', 'Microsoft Defender', 'VorXOC', 'security operations center', 'SOCaaS', 'managed security', 'cyber threat detection', 'incident response', 'cloud security', 'enterprise security'],
   authors: [{ name: 'Helxon' }],
   creator: 'Helxon',
@@ -46,7 +47,7 @@ export const metadata = {
     description: 'Enterprise-grade SOC-as-a-Service with 24/7 threat monitoring and Microsoft-powered security solutions.',
     images: [
       {
-        url: '/helxon-og-image.jpg',
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'Helxon Cybersecurity Solutions',
@@ -57,7 +58,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Helxon | Enterprise Cybersecurity & SOC-as-a-Service Solutions',
     description: 'Enterprise-grade SOC-as-a-Service with 24/7 threat monitoring and Microsoft-powered security solutions.',
-    images: ['/helxon-og-image.jpg'],
+    images: [helxonImage.src],
   },
   robots: {
     index: true,

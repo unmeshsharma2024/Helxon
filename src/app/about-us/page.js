@@ -16,7 +16,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: helxonImage,
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'About Helxon Cybersecurity',
@@ -27,7 +27,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'About Us - Our Mission & Cybersecurity Expertise | Helxon',
     description: 'Learn about Helxon\'s mission to deliver enterprise-grade cybersecurity solutions and our commitment to protecting organizations from cyber threats.',
-    images: [helxonImage],
+    images: [helxonImage.src],
   },
   alternates: {
     canonical: 'https://helxon.com/about-us',

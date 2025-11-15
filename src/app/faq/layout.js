@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: helxonImage,
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'Helxon FAQ',
@@ -21,7 +21,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'FAQ - Frequently Asked Questions About SOC-as-a-Service | Helxon',
     description: 'Get answers to common questions about Helxon\'s SOC-as-a-Service, pricing, Microsoft Sentinel integration, and compliance.',
-    images: [helxonImage],
+    images: [helxonImage.src],
   },
   alternates: {
     canonical: 'https://helxon.com/faq',

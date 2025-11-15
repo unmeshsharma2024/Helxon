@@ -19,7 +19,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: helxonImage,
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'VorXOC Security Platform',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'VorXOC Platform - Unified Security Operations Dashboard | Helxon',
     description: 'VorXOC is Helxon\'s proprietary unified security platform integrating Microsoft Sentinel, Defender, and multi-cloud environments.',
-    images: [helxonImage],
+    images: [helxonImage.src],
   },
   alternates: {
     canonical: 'https://helxon.com/vorxoc',

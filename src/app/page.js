@@ -12,7 +12,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: helxonImage,
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'Helxon Cybersecurity Solutions',
@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Helxon | Enterprise Cybersecurity & SOC-as-a-Service Solutions',
     description: 'Enterprise-grade SOC-as-a-Service with 24/7 threat monitoring and Microsoft-powered security solutions.',
-    images: [helxonImage],
+    images: [helxonImage.src],
   },
   alternates: {
     canonical: 'https://helxon.com',

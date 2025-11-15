@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: helxonImage,
+        url: helxonImage.src,
         width: 1200,
         height: 630,
         alt: 'Helxon Cybersecurity Blog',
@@ -21,7 +21,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Blogs - Cybersecurity Insights & Expert Perspectives | Helxon',
     description: 'Explore Helxon\'s cybersecurity blog for expert insights, industry updates, threat intelligence, and best practices.',
-    images: [helxonImage],
+    images: [helxonImage.src],
   },
   alternates: {
     canonical: 'https://helxon.com/blogs',

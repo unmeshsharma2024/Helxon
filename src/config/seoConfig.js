@@ -36,7 +36,7 @@ export const seoConfig = {
   
   // Default Open Graph Image
   ogImage: {
-    url: helxonImage,
+    url: helxonImage.src,
     width: 1200,
     height: 630,
     alt: 'Helxon Cybersecurity Solutions',
