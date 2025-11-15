@@ -18,18 +18,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Base URL for the website
-const baseUrl = 'https://helxon.com';
-
-// Default metadata for the entire site
 export const metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL('https://helxon.com'),
   title: {
-    default: 'Helxon | Enterprise Cybersecurity & SOC-as-a-Service Solutions',
+    default: 'Helxon - Enterprise Cybersecurity & SOC-as-a-Service Solutions',
     template: '%s | Helxon'
   },
-  description: 'Helxon delivers 24/7 SOC-as-a-Service, MDR, threat monitoring, detection, and incident response. Protect your business with enterprise-grade cybersecurity at scale.',
-  keywords: ['SOC-as-a-Service', 'cybersecurity', 'threat monitoring', 'Microsoft Sentinel', 'Microsoft Defender', 'VorXOC', 'security operations center', 'SOCaaS', 'managed security', 'cyber threat detection', 'incident response', 'cloud security', 'enterprise security'],
+  description: 'Helxon provides 24/7 SOC-as-a-Service, threat detection, and managed security operations powered by Microsoft Sentinel and Defender.',
+  keywords: 'cybersecurity, SOC-as-a-Service, threat detection, managed security, Microsoft Sentinel, Azure security, VorXOC',
   authors: [{ name: 'Helxon' }],
   creator: 'Helxon',
   publisher: 'Helxon',
@@ -41,24 +37,21 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: baseUrl,
+    url: 'https://helxon.com',
     siteName: 'Helxon',
-    title: 'Helxon | Enterprise Cybersecurity & SOC-as-a-Service Solutions',
-    description: 'Enterprise-grade SOC-as-a-Service with 24/7 threat monitoring and Microsoft-powered security solutions.',
     images: [
       {
-        url: helxonImage.src,
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Helxon Cybersecurity Solutions',
+        alt: 'Helxon - Enterprise Cybersecurity Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Helxon | Enterprise Cybersecurity & SOC-as-a-Service Solutions',
-    description: 'Enterprise-grade SOC-as-a-Service with 24/7 threat monitoring and Microsoft-powered security solutions.',
-    images: [helxonImage.src],
+    site: '@helxon',
+    creator: '@helxon',
   },
   robots: {
     index: true,
@@ -72,13 +65,9 @@ export const metadata = {
     },
   },
   verification: {
-    // Add your verification codes here when available
-    google: 'googleed9a0d1a76a9c2f4.html',
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
-  },
-  alternates: {
-    canonical: baseUrl,
+    google: '',
+    yandex: '',
+    bing: '',
   },
 };
 

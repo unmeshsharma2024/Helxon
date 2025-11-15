@@ -1,34 +1,27 @@
-import helxonImage from '@/app/assets/HelxonLogo.png';
 export const metadata = {
-  title: 'FAQ - Frequently Asked Questions About SOC-as-a-Service',
-  description: 'Get answers to common questions about Helxon\'s SOC-as-a-Service, pricing, Microsoft Sentinel integration, compliance, threat hunting, and how our security solutions protect businesses of all sizes.',
-  keywords: ['SOC FAQ', 'cybersecurity questions', 'SOCaaS pricing', 'security service questions', 'threat monitoring FAQ', 'Microsoft Sentinel FAQ', 'compliance questions'],
+  title: 'FAQ - Helxon SOC-as-a-Service & Cybersecurity Questions Answered',
+  description: 'Find answers to frequently asked questions about Helxon\'s SOC-as-a-Service, VorXOC platform, compliance support, threat detection, pricing, and security integrations.',
+  keywords: 'SOC-as-a-Service FAQ, cybersecurity questions, Helxon FAQ, VorXOC questions, compliance support, threat hunting, SIEM integration',
+  authors: [{ name: 'Helxon' }],
   openGraph: {
-    title: 'FAQ - Frequently Asked Questions About SOC-as-a-Service | Helxon',
-    description: 'Get answers to common questions about Helxon\'s SOC-as-a-Service, pricing, Microsoft Sentinel integration, and compliance.',
+    title: 'FAQ - Helxon SOC-as-a-Service & Cybersecurity Questions Answered',
+    description: 'Find answers to frequently asked questions about Helxon\'s SOC-as-a-Service, VorXOC platform, and security integrations.',
     url: 'https://helxon.com/faq',
+    siteName: 'Helxon',
     type: 'website',
-    images: [
-      {
-        url: helxonImage.src,
-        width: 1200,
-        height: 630,
-        alt: 'Helxon FAQ',
-      },
-    ],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ - Frequently Asked Questions About SOC-as-a-Service | Helxon',
-    description: 'Get answers to common questions about Helxon\'s SOC-as-a-Service, pricing, Microsoft Sentinel integration, and compliance.',
-    images: [helxonImage.src],
+    title: 'FAQ - Helxon SOC-as-a-Service & Cybersecurity Questions Answered',
+    description: 'Find answers to frequently asked questions about Helxon\'s SOC-as-a-Service, VorXOC platform, and security integrations.',
   },
-  alternates: {
-    canonical: 'https://helxon.com/faq',
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function FAQLayout({ children }) {
   return children;
 }
-

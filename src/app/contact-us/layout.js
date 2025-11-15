@@ -1,34 +1,27 @@
-import helxonImage from '@/app/assets/HelxonLogo.png';
 export const metadata = {
-  title: 'Contact Us - Get in Touch with Our Security Experts',
-  description: 'Contact Helxon for enterprise cybersecurity solutions. Speak with our security experts about SOC-as-a-Service, threat monitoring, and how we can protect your organization. Call +1(604) 499 5973 or email contact@helxon.com',
-  keywords: ['contact Helxon', 'cybersecurity consultation', 'security experts', 'SOC inquiry', 'enterprise security contact', 'threat protection consultation'],
+  title: 'Contact Helxon - Get Expert Cybersecurity Support',
+  description: 'Contact Helxon for enterprise cybersecurity solutions, SOC-as-a-Service inquiries, VorXOC platform demos, and security consultation. Available Mon-Fri 9 AM - 6 PM PST.',
+  keywords: 'contact Helxon, cybersecurity support, SOC consultation, security inquiry, VorXOC demo, customer support',
+  authors: [{ name: 'Helxon' }],
   openGraph: {
-    title: 'Contact Us - Get in Touch with Our Security Experts | Helxon',
-    description: 'Contact Helxon for enterprise cybersecurity solutions. Speak with our security experts about SOC-as-a-Service and threat monitoring.',
+    title: 'Contact Helxon - Get Expert Cybersecurity Support',
+    description: 'Contact Helxon for enterprise cybersecurity solutions, SOC-as-a-Service inquiries, and VorXOC platform demos.',
     url: 'https://helxon.com/contact-us',
+    siteName: 'Helxon',
     type: 'website',
-    images: [
-      {
-        url: helxonImage.src,
-        width: 1200,
-        height: 630,
-        alt: 'Contact Helxon',
-      },
-    ],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us - Get in Touch with Our Security Experts | Helxon',
-    description: 'Contact Helxon for enterprise cybersecurity solutions. Speak with our security experts about SOC-as-a-Service and threat monitoring.',
-    images: [helxonImage.src],
+    title: 'Contact Helxon - Get Expert Cybersecurity Support',
+    description: 'Contact Helxon for enterprise cybersecurity solutions, SOC-as-a-Service inquiries, and VorXOC platform demos.',
   },
-  alternates: {
-    canonical: 'https://helxon.com/contact-us',
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function ContactUsLayout({ children }) {
   return children;
 }
-
