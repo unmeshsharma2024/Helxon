@@ -15,6 +15,7 @@ export const metadata = {
     description:
       'Contact Helxon for enterprise cybersecurity solutions. Speak with our security experts about SOC-as-a-Service and threat monitoring.',
     url: 'https://helxon.com/contact-us',
+    siteName: 'Helxon',
     type: 'website',
     images: [
       {
@@ -32,12 +33,12 @@ export const metadata = {
       'Contact Helxon for enterprise cybersecurity solutions. Speak with our security experts about SOC-as-a-Service and threat monitoring.',
     images: ['/favicon.ico'],
   },
-  alternates: {
-    canonical: 'https://helxon.com/contact-us',
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function ContactUsLayout({ children }) {
   return children;
 }
-

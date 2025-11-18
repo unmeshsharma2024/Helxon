@@ -16,6 +16,7 @@ export const metadata = {
     description:
       "Get answers to common questions about Helxon's SOC-as-a-Service, pricing, Microsoft Sentinel integration, and compliance.",
     url: 'https://helxon.com/faq',
+    siteName: 'Helxon',
     type: 'website',
     images: [
       {
@@ -33,12 +34,12 @@ export const metadata = {
       "Get answers to common questions about Helxon's SOC-as-a-Service, pricing, Microsoft Sentinel integration, and compliance.",
     images: ['/favicon.ico'],
   },
-  alternates: {
-    canonical: 'https://helxon.com/faq',
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function FAQLayout({ children }) {
   return children;
 }
-
